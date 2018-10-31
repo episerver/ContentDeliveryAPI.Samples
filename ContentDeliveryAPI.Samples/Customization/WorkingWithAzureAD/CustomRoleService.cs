@@ -18,24 +18,24 @@ namespace ContentDeliveryAPI.Samples.Customization
         {
         }
 
-        /// <summary>
-        /// Get all roles from system.
-        /// </summary>
-        public override IEnumerable<string> GetAllRoles()
-        {
-            var synUserRepo = ServiceLocator.Current.GetInstance<ISynchronizedUsersRepository>();
-            var rolesStatus = synUserRepo.ListRoleStatus();
-            return (rolesStatus != null && rolesStatus.Any()) ? rolesStatus.Select(x => x.Name) : null;
-        }
+        ///// <summary>
+        ///// Get all roles from system.
+        ///// </summary>
+        //public override IEnumerable<string> GetAllRoles()
+        //{
+        //    var synUserRepo = ServiceLocator.Current.GetInstance<ISynchronizedUsersRepository>();
+        //    var rolesStatus = synUserRepo.ListRoleStatus();
+        //    return (rolesStatus != null && rolesStatus.Any()) ? rolesStatus.Select(x => x.Name) : null;
+        //}
 
-        /// <summary>
-        /// Check whether a given role is still valid.
-        /// </summary>
-        public override bool IsRoleValid(string role)
-        {
-            var allRoles = GetAllRoles();
-            var isValid = (allRoles != null && allRoles.Any(roleName => string.Equals(roleName, role, System.StringComparison.OrdinalIgnoreCase))) ? true : false;
-            return isValid || base.IsRoleValid(role);
-        }
+        ///// <summary>
+        ///// Check whether a given role is still valid.
+        ///// </summary>
+        //public override bool IsRoleValid(string role)
+        //{
+        //    var allRoles = GetAllRoles();
+        //    var isValid = (allRoles != null && allRoles.Any(roleName => string.Equals(roleName, role, System.StringComparison.OrdinalIgnoreCase))) ? true : false;
+        //    return isValid || base.IsRoleValid(role);
+        //}
     }
 }

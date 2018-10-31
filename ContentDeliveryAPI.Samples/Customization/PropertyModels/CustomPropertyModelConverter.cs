@@ -9,8 +9,8 @@ using System.Collections.Generic;
 namespace ContentDeliveryAPI.Samples.Customization
 {
     /// <summary>
-    /// Converter registers the <see cref="LowercaseLongStringPropertyModel"/> 
-    /// with a SortOrder higher than the default converter (SortOrder = 0), ensuring that the custom converter is used for all Long String properties.
+    /// Custom converter for property models
+    /// with a SortOrder higher than the default converter (SortOrder = 0), ensuring that the custom converter is used 
     /// For more information, go here https://world.episerver.com/documentation/developer-guides/content-delivery-api/serialization/
     /// </summary>
     [ServiceConfiguration(typeof(IPropertyModelConverter), Lifecycle = ServiceInstanceScope.Singleton)]

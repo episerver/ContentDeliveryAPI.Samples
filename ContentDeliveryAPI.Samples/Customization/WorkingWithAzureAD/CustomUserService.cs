@@ -18,15 +18,15 @@ namespace ContentDeliveryAPI.Samples.Customization
 
         }
 
-        /// <summary>
-        /// Check whether an user is valid
-        /// </summary>
-        public override bool IsUserValid(string name)
-        {
-            var synUserRepo = ServiceLocator.Current.GetInstance<ISynchronizedUsersRepository>();
+        ///// <summary>
+        ///// Check whether an user is valid
+        ///// </summary>
+        //public override bool IsUserValid(string name)
+        //{
+        //    var synUserRepo = ServiceLocator.Current.GetInstance<ISynchronizedUsersRepository>();
 
-            var users = synUserRepo.FindUsers(name);
-            return users != null && users.Any();
-        }
+        //    var users = synUserRepo.FindUsers(name);
+        //    return users != null && users.Any();
+        //}
     }
 }

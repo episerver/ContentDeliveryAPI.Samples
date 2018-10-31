@@ -21,7 +21,7 @@ namespace ContentDeliveryAPI.Samples.Customization
         }
 
         /// <summary>
-        /// Herre we override Expand behaviour of this model and expands all level 
+        /// Here we override Expand behaviour of this model and expands all level 
         /// </summary>
         /// <param name="language"></param>
         /// <returns></returns>
@@ -36,7 +36,7 @@ namespace ContentDeliveryAPI.Samples.Customization
             var filteredContent = content.Where(x => _accessEvaluator.HasAccess(x, principal, AccessLevel.Read)).ToList();
 
             // passing '*' as expand parameter to expand all property level.
-            // The default value is string.Empty and that's why on property level is expanded by default
+            // The default value is string.Empty and that's why one property level is expanded by default
             filteredContent.ForEach(x => expandedValue.Add(_contentModelMapper.TransformContent(x, ExcludePersonalizedContent, "*")));
             return expandedValue;
         }
