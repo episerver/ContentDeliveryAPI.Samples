@@ -13,7 +13,7 @@
         "build:dev": "cd ./src/MusicFestival.Vue.Template && set NODE_ENV=development && webpack"
     },
     "dependencies": {
-        "axios": "^0.17.1",
+        "axios": "^0.18.1",
         "babel-polyfill": "^6.26.0",
         "vue": "^2.6.10",
         "vue-router": "^3.0.6",
